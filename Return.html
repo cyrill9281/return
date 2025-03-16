@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Statements</h1>
+<h2>Returning a Function from Another Function</h2>
+
+<p id="demo"></p>
+
+<script>
+// Define a function that returns another function
+function greet(name) {
+  return function() {
+    return "Hello " + name;
+  };
+}
+
+// Call greet and get the returned function, then call it
+let greetingFunction = greet("Angel");
+document.getElementById("demo").innerHTML = greetingFunction();  // This calls the returned function
+</script>
+
+</body>
+</html>
